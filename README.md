@@ -34,3 +34,37 @@ for (let value of nums) {
 console.log(total); // 14
 
 ```
+
+### Factorial of a number
+
+Recursive approach
+
+```
+function factorial(n) {
+  if (n === 0 || n === 1) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
+}
+console.log(factorial(4));
+
+```
+
+Iterative Approach
+
+```
+function facIterative(n) {
+  let answer = 1;
+  if (n === 0 || n === 1) {
+    return answer;
+  } else {
+    for (let i = n; i >= 1; i--) {
+      answer = answer * i;
+    }
+    return answer;
+  }
+}
+console.log(facIterative(5));
+
+```

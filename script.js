@@ -1,5 +1,31 @@
 "use strict";
 
+//Factorial of a Number
+
+//Recursive approach
+function factorial(n) {
+  if (n === 0 || n === 1) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
+}
+console.log(factorial(4));
+
+//Iterative Approach
+function facIterative(n) {
+  let answer = 1;
+  if (n === 0 || n === 1) {
+    return answer;
+  } else {
+    for (let i = n; i >= 1; i--) {
+      answer = answer * i;
+    }
+    return answer;
+  }
+}
+console.log(facIterative(5));
+
 /*
 const add = (a, b, ...args) =>
   [a, b, ...args].reduce((acc, n) => {
