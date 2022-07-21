@@ -157,3 +157,21 @@ palindrome("motion"); //Not a plaindrome
 palindrome("peep"); //It is a plaindrome
 
 ```
+
+---
+
+### Anagram
+
+```
+function isAnagram(string1, string2) {
+  const normalize = (str) => {
+    return str.replace(/[^\w]/g, "").toLowerCase().split("").sort().join("");
+  };
+
+  return normalize(string1) === normalize(string2);
+}
+
+console.log(isAnagram("Night", "Thing")); // true
+console.log(isAnagram("Statue of Liberty", "Built to stay free")); // true
+console.log(isAnagram("Night", "Light")); // false
+```

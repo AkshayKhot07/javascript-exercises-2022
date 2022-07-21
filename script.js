@@ -1,5 +1,18 @@
 "use strict";
 
+function isAnagram(string1, string2) {
+  const normalize = (str) => {
+    return str.replace(/[^\w]/g, "").toLowerCase().split("").sort().join("");
+  };
+
+  return normalize(string1) === normalize(string2);
+}
+
+console.log(isAnagram("Night", "Thing")); // true
+console.log(isAnagram("Statue of Liberty", "Built to stay free")); // true
+console.log(isAnagram("Night", "Light")); // false
+
+/*
 function palindrome(string) {
   const str = string;
   const strReverse = str.split("").reverse().join("");
@@ -14,15 +27,9 @@ function palindrome(string) {
 palindrome("motion");
 palindrome("peep");
 
-// const str = "malayalam";
-// const strsplit = str.split("");
-// const strsplitreverse = JSON.parse(JSON.stringify(strsplit)).reverse().join("");
-// console.log(strsplit);
-// console.log(strsplitreverse);
-// console.log(str);
-// console.log(str === strsplitreverse);
 
-/*
+
+
 function primeNumber(n) {
   if (n <= 1) {
     return false;
