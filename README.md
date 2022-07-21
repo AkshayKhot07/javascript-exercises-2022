@@ -135,3 +135,25 @@ function getPrimes(num) {
 getPrimes(50); // [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
 
 ```
+
+---
+
+### Palindrome
+
+```
+function palindrome(string) {
+  const str = string;
+  const strReverse = str.split("").reverse().join("");
+  console.log(str);
+  console.log(strReverse);
+  if (str === strReverse) {
+    console.log("It is a plaindrome");
+  } else {
+    console.log("Not a plaindrome");
+  }
+}
+palindrome("motion"); //Not a plaindrome
+
+palindrome("peep"); //It is a plaindrome
+
+```
