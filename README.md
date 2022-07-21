@@ -13,3 +13,24 @@ Input: nums = [1,2,3,4]
 Output: false
 
 [Solution](https://github.com/AkshayKhot07/javascript-exercises-2022/blob/main/Solutions/001.js)
+
+---
+
+### Sum of Numbers
+
+```
+const add = (a, b, ...args) =>
+  [a, b, ...args].reduce((acc, n) => {
+    return acc + n;
+  }, 0);
+
+console.log(add(1, 2, 50));
+
+let nums = [1, 5, 2, 6];
+let total = 0;
+for (let value of nums) {
+  total += value;
+}
+console.log(total);
+
+```
