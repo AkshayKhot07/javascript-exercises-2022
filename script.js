@@ -1,5 +1,21 @@
 "use strict";
 
+/*
+const add = (a, b, ...args) =>
+  [a, b, ...args].reduce((acc, n) => {
+    return acc + n;
+  }, 0);
+
+console.log(add(1, 2, 50));
+
+let nums = [1, 5, 2, 6];
+let total = 0;
+for (let value of nums) {
+  total += value;
+}
+console.log(total);
+
+
 let nums = [1, 2, 3, 4, 6, 9, 90, 89, 77, 54, 77];
 
 function containsDuplicate(arr) {
@@ -19,7 +35,7 @@ function containsDuplicate(arr) {
 
 console.log(containsDuplicate(nums));
 
-/*
+
 let list = {
   value: 1,
   next: {

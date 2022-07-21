@@ -24,13 +24,13 @@ const add = (a, b, ...args) =>
     return acc + n;
   }, 0);
 
-console.log(add(1, 2, 50));
+console.log(add(1, 2, 50)); // 53
 
 let nums = [1, 5, 2, 6];
 let total = 0;
 for (let value of nums) {
   total += value;
 }
-console.log(total);
+console.log(total); // 14
 
 ```
