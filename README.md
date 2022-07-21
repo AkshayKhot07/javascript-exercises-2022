@@ -35,6 +35,8 @@ console.log(total); // 14
 
 ```
 
+---
+
 ### Factorial of a number
 
 Recursive approach
