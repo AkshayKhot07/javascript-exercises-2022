@@ -1,5 +1,25 @@
 "use strict";
 
+//Iterative approach
+let fib = [0, 1];
+for (let i = 2; i <= 10; i++) {
+  fib[i] = fib[i - 2] + fib[i - 1];
+}
+console.log(fib); // [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+
+//Recursive approach
+function fibRecursive(n) {
+  if (n < 1) {
+    return 0;
+  } else if (n <= 2) {
+    return 1;
+  } else {
+    return fibRecursive(n - 2) + fibRecursive(n - 1);
+  }
+}
+console.log(fibRecursive(10)); // 55
+
+/*
 //Factorial of a Number
 
 //Recursive approach
@@ -26,7 +46,7 @@ function facIterative(n) {
 }
 console.log(facIterative(5));
 
-/*
+
 const add = (a, b, ...args) =>
   [a, b, ...args].reduce((acc, n) => {
     return acc + n;
