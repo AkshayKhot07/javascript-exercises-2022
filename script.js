@@ -1,4 +1,14 @@
 "use strict";
+
+function removeDuplicate() {
+  const arr = [1, 4, 5, 7, 4, "a", "d", 1, 8, 2, 2, "a", "d"];
+  const uniqueArr = [...new Set(arr)];
+  console.log(uniqueArr);
+}
+
+removeDuplicate();
+
+/*
 function fizzBuzz() {
   for (let i = 1; i <= 100; i++) {
     if (i % 3 === 0 && i % 5 === 0) {
@@ -15,7 +25,7 @@ function fizzBuzz() {
 
 fizzBuzz();
 
-/*
+
 function isAnagram(string1, string2) {
   const normalize = (str) => {
     return str.replace(/[^\w]/g, "").toLowerCase().split("").sort().join("");

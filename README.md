@@ -198,3 +198,18 @@ function fizzBuzz() {
 fizzBuzz();
 
 ```
+
+---
+
+### Remove Duplicates
+
+```
+function removeDuplicate() {
+  const arr = [1, 4, 5, 7, 4, "a", "d", 1, 8, 2, 2, "a", "d"];
+  const uniqueArr = [...new Set(arr)];
+  console.log(uniqueArr);
+}
+
+removeDuplicate();
+
+```
