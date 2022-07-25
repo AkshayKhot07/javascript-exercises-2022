@@ -1,5 +1,28 @@
 "use strict";
 
+//Math methods
+let arr = [100, 43, 2, 5, 7, 98];
+function minMax(array) {
+  return {
+    min: Math.min(...array),
+    max: Math.max(...array),
+  };
+}
+console.log(minMax(arr));
+
+//Array sort method
+let arr2 = [506, 43, 1, 5, 719, 98];
+function getMinMax(array) {
+  const sortedArray = array.sort((a, b) => a - b);
+
+  return {
+    min: sortedArray[0],
+    max: sortedArray[sortedArray.length - 1],
+  };
+}
+console.log(getMinMax(arr2));
+
+/*
 function removeDuplicate() {
   const arr = [1, 4, 5, 7, 4, "a", "d", 1, 8, 2, 2, "a", "d"];
   const uniqueArr = [...new Set(arr)];
@@ -8,7 +31,7 @@ function removeDuplicate() {
 
 removeDuplicate();
 
-/*
+
 function fizzBuzz() {
   for (let i = 1; i <= 100; i++) {
     if (i % 3 === 0 && i % 5 === 0) {

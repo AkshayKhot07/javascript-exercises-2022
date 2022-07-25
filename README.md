@@ -213,3 +213,32 @@ function removeDuplicate() {
 removeDuplicate();
 
 ```
+
+---
+
+### Find Min and Max
+
+```
+//Math methods
+let arr = [100, 43, 2, 5, 7, 98];
+function minMax(array) {
+  return {
+    min: Math.min(...array),
+    max: Math.max(...array),
+  };
+}
+console.log(minMax(arr));
+
+//Array sort method
+let arr2 = [506, 43, 1, 5, 719, 98];
+function getMinMax(array) {
+  const sortedArray = array.sort((a, b) => a - b);
+
+  return {
+    min: sortedArray[0],
+    max: sortedArray[sortedArray.length - 1],
+  };
+}
+console.log(getMinMax(arr2));
+
+```
