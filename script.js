@@ -1,5 +1,21 @@
 "use strict";
+function fizzBuzz() {
+  for (let i = 1; i <= 100; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log("FizzBuzz");
+    } else if (i % 3 === 0) {
+      console.log("Fizz");
+    } else if (i % 5 === 0) {
+      console.log("Buzz");
+    } else {
+      console.log(i);
+    }
+  }
+}
 
+fizzBuzz();
+
+/*
 function isAnagram(string1, string2) {
   const normalize = (str) => {
     return str.replace(/[^\w]/g, "").toLowerCase().split("").sort().join("");
@@ -12,7 +28,7 @@ console.log(isAnagram("Night", "Thing")); // true
 console.log(isAnagram("Statue of Liberty", "Built to stay free")); // true
 console.log(isAnagram("Night", "Light")); // false
 
-/*
+
 function palindrome(string) {
   const str = string;
   const strReverse = str.split("").reverse().join("");
