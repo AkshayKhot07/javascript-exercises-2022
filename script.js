@@ -1,5 +1,19 @@
 "use strict";
 
+function useFlat(arr) {
+  let results = [];
+  for (let item of arr) {
+    if (typeof item !== "number") {
+      results.push(...useFlat(item));
+    } else {
+      results.push(item);
+    }
+  }
+  return results;
+}
+console.log(useFlat([1, 2, 3, [4, 5, [6, 7]]]));
+
+/*
 //Math methods
 let arr = [100, 43, 2, 5, 7, 98];
 function minMax(array) {
@@ -22,7 +36,7 @@ function getMinMax(array) {
 }
 console.log(getMinMax(arr2));
 
-/*
+
 function removeDuplicate() {
   const arr = [1, 4, 5, 7, 4, "a", "d", 1, 8, 2, 2, "a", "d"];
   const uniqueArr = [...new Set(arr)];

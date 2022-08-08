@@ -242,3 +242,23 @@ function getMinMax(array) {
 console.log(getMinMax(arr2));
 
 ```
+
+---
+
+### Flatten a nested array
+
+```
+function useFlat(arr) {
+  let results = [];
+  for (let item of arr) {
+    if (typeof item !== "number") {
+      results.push(...useFlat(item));
+    } else {
+      results.push(item);
+    }
+  }
+  return results;
+}
+console.log(useFlat([1, 2, 3, [4, 5, [6, 7]]]));
+
+```
