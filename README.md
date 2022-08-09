@@ -279,3 +279,22 @@ function reverseString(str) {
 reverseString("Hello Akshay");
 
 ```
+
+---
+
+### Count all Vowels
+
+```
+function countVowels(sentence) {
+  let vowelsCount = 0;
+  const vowels = ["a", "e", "i", "o", "u"];
+  for (let char of sentence) {
+    if (vowels.includes(char.toLowerCase())) {
+      vowelsCount++;
+    }
+  }
+  return vowelsCount;
+}
+console.log(countVowels("iroeat")); // 4
+
+```

@@ -1,5 +1,18 @@
 "use strict";
 
+function countVowels(sentence) {
+  let vowelsCount = 0;
+  const vowels = ["a", "e", "i", "o", "u"];
+  for (let char of sentence) {
+    if (vowels.includes(char.toLowerCase())) {
+      vowelsCount++;
+    }
+  }
+  return vowelsCount;
+}
+console.log(countVowels("iroeat")); // 4
+
+/*
 function reverseString(str) {
   let character = "";
   for (let i = 0; i < str.length; i++) {
@@ -10,7 +23,7 @@ function reverseString(str) {
 
 reverseString("Hello Akshay");
 
-/*
+
 function useFlat(arr) {
   let results = [];
   for (let item of arr) {
