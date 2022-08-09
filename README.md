@@ -262,3 +262,20 @@ function useFlat(arr) {
 console.log(useFlat([1, 2, 3, [4, 5, [6, 7]]]));
 
 ```
+
+---
+
+### Reverse a string
+
+```
+function reverseString(str) {
+  let character = "";
+  for (let i = 0; i < str.length; i++) {
+    character = str[i] + character;
+  }
+  console.log(character);
+}
+
+reverseString("Hello Akshay");
+
+```

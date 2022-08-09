@@ -1,5 +1,16 @@
 "use strict";
 
+function reverseString(str) {
+  let character = "";
+  for (let i = 0; i < str.length; i++) {
+    character = str[i] + character;
+  }
+  console.log(character);
+}
+
+reverseString("Hello Akshay");
+
+/*
 function useFlat(arr) {
   let results = [];
   for (let item of arr) {
@@ -13,7 +24,7 @@ function useFlat(arr) {
 }
 console.log(useFlat([1, 2, 3, [4, 5, [6, 7]]]));
 
-/*
+
 //Math methods
 let arr = [100, 43, 2, 5, 7, 98];
 function minMax(array) {
